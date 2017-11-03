@@ -969,6 +969,8 @@ var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _navButtons = __webpack_require__(38);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -998,12 +1000,116 @@ var App = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 null,
+                _react2.default.createElement(Menu, null),
                 'Test'
             );
         }
     }]);
 
     return App;
+}(_react2.default.Component);
+
+// Menu
+
+var Menu = function (_React$Component2) {
+    _inherits(Menu, _React$Component2);
+
+    function Menu() {
+        _classCallCheck(this, Menu);
+
+        return _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).apply(this, arguments));
+    }
+
+    _createClass(Menu, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { 'class': 'menu' },
+                _react2.default.createElement(MiniLogo, null),
+                _react2.default.createElement(NavButtons, null)
+            );
+        }
+    }]);
+
+    return Menu;
+}(_react2.default.Component);
+
+// Logo in Menu
+
+
+var MiniLogo = function (_React$Component3) {
+    _inherits(MiniLogo, _React$Component3);
+
+    function MiniLogo() {
+        _classCallCheck(this, MiniLogo);
+
+        return _possibleConstructorReturn(this, (MiniLogo.__proto__ || Object.getPrototypeOf(MiniLogo)).apply(this, arguments));
+    }
+
+    _createClass(MiniLogo, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                'OBRAZEK'
+            );
+        }
+    }]);
+
+    return MiniLogo;
+}(_react2.default.Component);
+
+// Nav Buttons
+
+
+var NavButtons = function (_React$Component4) {
+    _inherits(NavButtons, _React$Component4);
+
+    function NavButtons() {
+        _classCallCheck(this, NavButtons);
+
+        return _possibleConstructorReturn(this, (NavButtons.__proto__ || Object.getPrototypeOf(NavButtons)).apply(this, arguments));
+    }
+
+    _createClass(NavButtons, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { 'class': 'navButtons' },
+                _react2.default.createElement(_navButtons.HomeNavButton, null),
+                _react2.default.createElement(_navButtons.AboutMeNavButton, null),
+                _react2.default.createElement(_navButtons.SkillsNavButton, null),
+                _react2.default.createElement(_navButtons.ContactNavButton, null)
+            );
+        }
+    }]);
+
+    return NavButtons;
+}(_react2.default.Component);
+
+// Social buttons
+
+
+var SocialButtons = function (_React$Component5) {
+    _inherits(SocialButtons, _React$Component5);
+
+    function SocialButtons() {
+        _classCallCheck(this, SocialButtons);
+
+        return _possibleConstructorReturn(this, (SocialButtons.__proto__ || Object.getPrototypeOf(SocialButtons)).apply(this, arguments));
+    }
+
+    _createClass(SocialButtons, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement('div', { 'class': 'socialButtons' });
+        }
+    }]);
+
+    return SocialButtons;
 }(_react2.default.Component);
 
 /***/ }),
@@ -21220,7 +21326,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(35)(content, options);
+var update = __webpack_require__(36)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -21242,10 +21348,10 @@ if(false) {
 
 exports = module.exports = __webpack_require__(34)(undefined);
 // imports
-
+exports.i(__webpack_require__(42), "");
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".navButtons {\n  background-color: #B2DFDB;\n  display: flex; }\n  .navButtons .homeNavButton {\n    background-image: url(" + __webpack_require__(35) + ");\n    width: 32px;\n    height: 32px; }\n  .navButtons .aboutMeNavButton {\n    background-image: url(" + __webpack_require__(39) + ");\n    width: 32px;\n    height: 32px; }\n  .navButtons .skillsNavButton {\n    background-image: url(" + __webpack_require__(40) + ");\n    width: 32px;\n    height: 32px; }\n  .navButtons .contactNavButton {\n    background-image: url(" + __webpack_require__(41) + ");\n    width: 32px;\n    height: 32px; }\n", ""]);
 
 // exports
 
@@ -21334,6 +21440,12 @@ function toComment(sourceMap) {
 
 /***/ }),
 /* 35 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwOC8xOC8wOaw6EPwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzQGstOgAAAAoElEQVRYhe3W0Q6AIAgF0HT9nF/s59mTW0tMuAasDR4rvCdNV2qtHZ6VXdN/DyilbK8fDOjhuwgI8AzdQYgBszAUIQKsQhBE4p4DksFrrYnq6dfvxZoB6ZtJnl8C0LXl9r0CvtjnMMAifAqwCicBluEDQDucGj+/3bRAZMtwCjGchJoY+CTUrAAE4JQ2UF9yL2QHuc9AAALA/ivWKvcZuACxsEbJ9IeeggAAAABJRU5ErkJggg=="
+
+/***/ }),
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -21389,7 +21501,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(36);
+var	fixUrls = __webpack_require__(37);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -21705,7 +21817,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 
@@ -21797,6 +21909,144 @@ module.exports = function (css) {
 	// send back the fixed css
 	return fixedCss;
 };
+
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.ContactNavButton = exports.SkillsNavButton = exports.AboutMeNavButton = exports.HomeNavButton = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(18);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var HomeNavButton = exports.HomeNavButton = function (_React$Component) {
+    _inherits(HomeNavButton, _React$Component);
+
+    function HomeNavButton() {
+        _classCallCheck(this, HomeNavButton);
+
+        return _possibleConstructorReturn(this, (HomeNavButton.__proto__ || Object.getPrototypeOf(HomeNavButton)).apply(this, arguments));
+    }
+
+    _createClass(HomeNavButton, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement('div', { 'class': 'homeNavButton' });
+        }
+    }]);
+
+    return HomeNavButton;
+}(_react2.default.Component);
+
+var AboutMeNavButton = exports.AboutMeNavButton = function (_React$Component2) {
+    _inherits(AboutMeNavButton, _React$Component2);
+
+    function AboutMeNavButton() {
+        _classCallCheck(this, AboutMeNavButton);
+
+        return _possibleConstructorReturn(this, (AboutMeNavButton.__proto__ || Object.getPrototypeOf(AboutMeNavButton)).apply(this, arguments));
+    }
+
+    _createClass(AboutMeNavButton, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement('div', { 'class': 'aboutMeNavButton' });
+        }
+    }]);
+
+    return AboutMeNavButton;
+}(_react2.default.Component);
+
+var SkillsNavButton = exports.SkillsNavButton = function (_React$Component3) {
+    _inherits(SkillsNavButton, _React$Component3);
+
+    function SkillsNavButton() {
+        _classCallCheck(this, SkillsNavButton);
+
+        return _possibleConstructorReturn(this, (SkillsNavButton.__proto__ || Object.getPrototypeOf(SkillsNavButton)).apply(this, arguments));
+    }
+
+    _createClass(SkillsNavButton, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement('div', { 'class': 'skillsNavButton' });
+        }
+    }]);
+
+    return SkillsNavButton;
+}(_react2.default.Component);
+
+var ContactNavButton = exports.ContactNavButton = function (_React$Component4) {
+    _inherits(ContactNavButton, _React$Component4);
+
+    function ContactNavButton() {
+        _classCallCheck(this, ContactNavButton);
+
+        return _possibleConstructorReturn(this, (ContactNavButton.__proto__ || Object.getPrototypeOf(ContactNavButton)).apply(this, arguments));
+    }
+
+    _createClass(ContactNavButton, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement('div', { 'class': 'contactNavButton' });
+        }
+    }]);
+
+    return ContactNavButton;
+}(_react2.default.Component);
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwOC8xOC8wOaw6EPwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzQGstOgAAABVElEQVRYhe2XMU7DMBSGv0RlQUicALUTYuMIzZg3wcbaI1RcgB4hR2BlKttbewsWloxsDB2jhiEuCqkdXGTFkeg/xe/F7//9+9lKkrquiYk0KvtJAJDkeb4FziPxv6WGPIlAngDXEzOoVPVsKGYRuQJKGEEPTFwJEbkHCmBqQiWwVNXXkAKsDhjydYsc87w2uWBwOVD0zCmAAxdExOtKVdUfDe8SMHXEe3Pd4l3YRI62CUvcKy1dxXy3wUfAkqYJXbkD/Ga/C9YtMEftEdi2whXwAmz+QuSC1QERyYAn4KLz7gNwIyKZqn525oQ5BSIyozlml44atyaf9RX2hc2Bood8j7mILFT1eR8I4oBZ/Z1PIWABfAsI5UB2xNx5exCqB2ZHCMA048ZW2BfjuglVdQWshhQQ3YHoApI8z3c0H4i7gblToEqBjwjkGM735PRv+O8FfAHJP2JjVd/23gAAAABJRU5ErkJggg=="
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwOC8xOC8wOaw6EPwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzQGstOgAAABmklEQVRYhc2XzU3DQBCFvyAQR9IBdBCXYG7MCTogdOAbR5wKgAowHSSnuYYOcAfQATmBxCEcvJaSidfxz0bmSZa8M96dp5m3s+vRer1mSBwNGv0/EDgOtZCIxMATMAFmqpo2mTcKoQERmQIvbpiratR0bu8SiMh4IzjA3PgjEZnjQQgNTM34xowz4No3OYQGxmY8cSWJgJhCE16EIPBVYXupsFUiRAnmwO+eb14PSeACOKnx50ByEAJuB2Qe9wqYAbGqVpUJ6K+BBDg3toWq2p3gRecMiEgEPBjzipp0ByVA0XYtUlX9aLNIp1YsIgnwaMytWnCJ1hlwwksrXNO2a3UiQJH6M2N7VtX3gxNwR+6tMX9SnZHwBKje80ndPt+HWhG6eifusWkHeFPVuGtwqGlELvgS/2n2TUfhbaKuBOX1qsvcIASs2CxO2b18tEaTsyCnKMUPcG989jISnMBWdxORK7bL0ln9JepKsGBXZEszzvoS8GbAc6TGG+93ffZ/icZKFpGUIv05cKmqWd/gEOjHpA8G/zccnMAfH35qGhbzM9UAAAAASUVORK5CYII="
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwOC8xOC8wOaw6EPwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzQGstOgAAABa0lEQVRYhe2Xz3GCQBjFf2a8QwfYgXYQcuSEqQBTQUwHpgK1A+wgnjhqOggdhA6kAnL4dieIy78JDjnsu8D+Gd773vt2Z5gURcGYeBiV3QqwAqyA/yBgWh4EQfANeHfmzJIkmelB1QEPSIHsDsS5+u5VgaYI5ur5OSC5LujG3boe8IAFcByAXBfimBabmtABfOCA2NcXOVLAgoa+ajsFDhABMf0iSYEPIKSm8q4CNF6BC7DvsPcAfCHCW9HnHgiRSJ4xR5IDb4jlncj7CgBwkTh8riNJ1dxG7el8jLsK0A3lIpnGwBJ4R2Lx1ZyDNNwFiWIQAUduG2oOxEmSbJCqz/zeH3p9iUTS6EaTgAx4Ue+mTMMgCGIDuYYDbIEdDc1bJ2CPVLBGKq9DVENexhaJ7gmDG9PKOANW6v1MyxnugQiYIb2yLi9UHVipjacByTUekaLi8mTVgR3tlv4FnhLh6omJ/TGxAqyAsQX8AAUORq0bvfN2AAAAAElFTkSuQmCC"
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(34)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "html, body, div, span, applet, object, iframe,\r\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\r\na, abbr, acronym, address, big, cite, code,\r\ndel, dfn, em, img, ins, kbd, q, s, samp,\r\nsmall, strike, strong, sub, sup, tt, var,\r\nb, u, i, center,\r\ndl, dt, dd, ol, ul, li,\r\nfieldset, form, label, legend,\r\ntable, caption, tbody, tfoot, thead, tr, th, td,\r\narticle, aside, canvas, details, embed, \r\nfigure, figcaption, footer, header, hgroup, \r\nmenu, nav, output, ruby, section, summary,\r\ntime, mark, audio, video {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tborder: 0;\r\n\tfont-size: 100%;\r\n\tfont: inherit;\r\n\tvertical-align: baseline;\r\n}\r\n/* HTML5 display-role reset for older browsers */\r\narticle, aside, details, figcaption, figure, \r\nfooter, header, hgroup, menu, nav, section {\r\n\tdisplay: block;\r\n}\r\nbody {\r\n\tline-height: 1;\r\n}\r\nol, ul {\r\n\tlist-style: none;\r\n}\r\nblockquote, q {\r\n\tquotes: none;\r\n}\r\nblockquote:before, blockquote:after,\r\nq:before, q:after {\r\n\tcontent: '';\r\n\tcontent: none;\r\n}\r\ntable {\r\n\tborder-collapse: collapse;\r\n\tborder-spacing: 0;\r\n}", ""]);
+
+// exports
 
 
 /***/ })
