@@ -26,9 +26,10 @@ class App extends React.Component {
 class Menu extends React.Component {
 
     render() {
-        return <div class="menu">
+        return <div class="menu">            
             <MiniLogo />
-            <NavButtons />
+            <MenuButton />
+            <NavButtons />            
             </div>
     }
 }
@@ -36,8 +37,19 @@ class Menu extends React.Component {
 // Logo in Menu
 class MiniLogo extends React.Component {
     render() {
-        return <div>
+        return <div class="minLogo">
             OBRAZEK
+            </div>
+    }
+}
+
+//Menu button
+class MenuButton extends React.Component {
+    render() {
+        return <div class="menuButton">
+                    <div class="singleBelt" />
+                    <div class="singleBelt" />
+                    <div class="singleBelt" />
             </div>
     }
 }
