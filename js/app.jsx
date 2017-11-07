@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', function(){
     );
 });
 
+window.addEventListener('resize', function(){
+    var navButtons = document.getElementsByClassName('navButtons');
+
+    if(window.innerWidth > 500) {                
+        navButtons[0].style.visibility = 'visible'
+    } else {
+        navButtons[0].style.visibility = 'hidden'
+    }
+});
+
 class App extends React.Component {
 
     render() {
@@ -45,7 +55,6 @@ class MiniLogo extends React.Component {
 //Menu button
 class MenuButton extends React.Component {
     showNavButtons = () => {
-       // if (typeof this.eventOnClick === 'function') {
             var navButtons = document.getElementsByClassName('navButtons');
 
             if(navButtons[0].style.visibility == 'visible') {

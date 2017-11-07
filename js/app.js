@@ -1113,6 +1113,16 @@ document.addEventListener('DOMContentLoaded', function () {
     _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
 });
 
+window.addEventListener('resize', function () {
+    var navButtons = document.getElementsByClassName('navButtons');
+
+    if (window.innerWidth > 500) {
+        navButtons[0].style.visibility = 'visible';
+    } else {
+        navButtons[0].style.visibility = 'hidden';
+    }
+});
+
 var App = function (_React$Component) {
     _inherits(App, _React$Component);
 
@@ -1207,7 +1217,6 @@ var MenuButton = function (_React$Component4) {
         }
 
         return _ret = (_temp = (_this4 = _possibleConstructorReturn(this, (_ref = MenuButton.__proto__ || Object.getPrototypeOf(MenuButton)).call.apply(_ref, [this].concat(args))), _this4), _this4.showNavButtons = function () {
-            // if (typeof this.eventOnClick === 'function') {
             var navButtons = document.getElementsByClassName('navButtons');
 
             if (navButtons[0].style.visibility == 'visible') {
@@ -21584,7 +21593,7 @@ exports = module.exports = __webpack_require__(16)(undefined);
 exports.i(__webpack_require__(36), "");
 
 // module
-exports.push([module.i, "@media (max-width: 500px) {\n  .menu {\n    background-color: #B2DFDB;\n    width: 100%;\n    height: 60px; }\n    .menu .menuButton {\n      width: 10%;\n      height: 33px;\n      margin-top: 10px; }\n      .menu .menuButton .singleBelt {\n        width: 35px;\n        height: 5px;\n        background-color: black;\n        margin: 6px 0; }\n  .navButtons {\n    background-color: #B2DFDB;\n    opacity: 1;\n    left: 0;\n    position: fixed;\n    top: 60px;\n    width: 100%;\n    height: 60px;\n    visibility: hidden; }\n    .navButtons .homeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .aboutMeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .skillsNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .contactNavButton {\n      width: 25%;\n      height: 60px; } }\n\n@media (min-width: 501px) {\n  .menu .menuButton {\n    visibility: hidden; }\n  .navButtons {\n    background-color: red; }\n    .navButtons .homeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .aboutMeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .skillsNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .contactNavButton {\n      width: 32px;\n      height: 32px; } }\n\n.menu .minLogo {\n  visibility: hidden;\n  float: left; }\n\n.menu .menuButton {\n  float: right; }\n\n.navButtons {\n  display: flex; }\n  .navButtons .homeNavButton {\n    background-image: url(" + __webpack_require__(37) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .aboutMeNavButton {\n    background-image: url(" + __webpack_require__(38) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .skillsNavButton {\n    background-image: url(" + __webpack_require__(39) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .contactNavButton {\n    background-image: url(" + __webpack_require__(40) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n", ""]);
+exports.push([module.i, "@media (max-width: 500px) {\n  .menu {\n    background-color: #B2DFDB;\n    width: 100%;\n    height: 60px; }\n    .menu .menuButton {\n      width: 10%;\n      height: 33px;\n      margin-top: 10px; }\n      .menu .menuButton .singleBelt {\n        width: 35px;\n        height: 5px;\n        background-color: black;\n        margin: 6px 0; }\n  .navButtons {\n    background-color: #B2DFDB;\n    opacity: 1;\n    left: 0;\n    position: fixed;\n    top: 60px;\n    width: 100%;\n    height: 60px;\n    visibility: hidden; }\n    .navButtons .homeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .aboutMeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .skillsNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .contactNavButton {\n      width: 25%;\n      height: 60px; } }\n\n@media (min-width: 501px) {\n  .menu .menuButton {\n    visibility: hidden; }\n  .navButtons {\n    background-color: red;\n    visibility: visible; }\n    .navButtons .homeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .aboutMeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .skillsNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .contactNavButton {\n      width: 32px;\n      height: 32px; } }\n\n.menu .minLogo {\n  visibility: hidden;\n  float: left; }\n\n.menu .menuButton {\n  float: right; }\n\n.navButtons {\n  display: flex; }\n  .navButtons .homeNavButton {\n    background-image: url(" + __webpack_require__(37) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .aboutMeNavButton {\n    background-image: url(" + __webpack_require__(38) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .skillsNavButton {\n    background-image: url(" + __webpack_require__(39) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .contactNavButton {\n    background-image: url(" + __webpack_require__(40) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n", ""]);
 
 // exports
 
