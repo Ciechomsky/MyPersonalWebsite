@@ -21594,10 +21594,10 @@ if(false) {
 exports = module.exports = __webpack_require__(16)(undefined);
 // imports
 exports.i(__webpack_require__(36), "");
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);", ""]);
 
 // module
-exports.push([module.i, "@media (max-width: 500px) {\n  .menu {\n    background-color: #B2DFDB;\n    width: 100%;\n    height: 60px; }\n    .menu .menuButton {\n      width: 10%;\n      height: 33px;\n      margin-top: 10px; }\n      .menu .menuButton .singleBelt {\n        width: 35px;\n        height: 5px;\n        background-color: black;\n        margin: 6px 0; }\n  .navButtons {\n    background-color: #B2DFDB;\n    opacity: 1;\n    left: 0;\n    position: fixed;\n    top: 60px;\n    width: 100%;\n    height: 60px;\n    visibility: hidden; }\n    .navButtons .homeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .aboutMeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .skillsNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .contactNavButton {\n      width: 25%;\n      height: 60px; } }\n\n@media (min-width: 501px) {\n  .menu .menuButton {\n    visibility: hidden; }\n  .navButtons {\n    background-color: red; }\n    .navButtons .homeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .aboutMeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .skillsNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .contactNavButton {\n      width: 32px;\n      height: 32px; } }\n\n.menu .minLogo {\n  visibility: hidden;\n  float: left; }\n\n.menu .menuButton {\n  float: right; }\n\n.navButtons {\n  display: flex; }\n  .navButtons .homeNavButton {\n    background-image: url(" + __webpack_require__(37) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .aboutMeNavButton {\n    background-image: url(" + __webpack_require__(38) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .skillsNavButton {\n    background-image: url(" + __webpack_require__(39) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .contactNavButton {\n    background-image: url(" + __webpack_require__(40) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: 'Press Start 2P', cursive; }\n\n.interLine {\n  display: inline-block;\n  margin-bottom: 0.3em; }\n\n.navButtons {\n  display: flex; }\n  .navButtons .homeNavButton {\n    background-image: url(" + __webpack_require__(37) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .aboutMeNavButton {\n    background-image: url(" + __webpack_require__(38) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .skillsNavButton {\n    background-image: url(" + __webpack_require__(39) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .contactNavButton {\n    background-image: url(" + __webpack_require__(40) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n\n@media (max-width: 500px) {\n  .menu {\n    background-color: #B2DFDB;\n    width: 100%;\n    height: 60px; }\n    .menu .menuButton {\n      width: 10%;\n      height: 33px;\n      margin-top: 10px; }\n      .menu .menuButton .singleBelt {\n        width: 35px;\n        height: 5px;\n        background-color: black;\n        margin: 6px 0; }\n  .navButtons {\n    background-color: #B2DFDB;\n    opacity: 1;\n    left: 0;\n    position: fixed;\n    top: 60px;\n    width: 100%;\n    height: 60px;\n    visibility: hidden; }\n    .navButtons .homeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .aboutMeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .skillsNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .contactNavButton {\n      width: 25%;\n      height: 60px; }\n  .homePage {\n    margin: 100px 0 0 50px;\n    font-size: 2em; }\n    .homePage .contactButton {\n      border: solid 0.1em black;\n      color: red; } }\n\n@media (min-width: 501px) {\n  .menu .menuButton {\n    visibility: hidden; }\n  .navButtons {\n    background-color: red; }\n    .navButtons .homeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .aboutMeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .skillsNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .contactNavButton {\n      width: 32px;\n      height: 32px; } }\n\n.menu .minLogo {\n  visibility: hidden;\n  float: left; }\n\n.menu .menuButton {\n  float: right; }\n", ""]);
 
 // exports
 
@@ -22151,9 +22151,9 @@ var HomePage = exports.HomePage = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
-                ' ',
-                _react2.default.createElement(HomeText, null)
+                { className: 'homePage' },
+                _react2.default.createElement(HomeText, null),
+                _react2.default.createElement(HomeContactButton, null)
             );
         }
     }]);
@@ -22178,49 +22178,48 @@ var HomeText = function (_React$Component2) {
                 null,
                 _react2.default.createElement(
                     'span',
-                    null,
+                    { className: 'interLine' },
                     'H'
                 ),
                 _react2.default.createElement(
                     'span',
-                    null,
+                    { className: 'interLine' },
                     'i'
                 ),
                 _react2.default.createElement(
                     'span',
-                    null,
+                    { className: 'interLine' },
                     ','
                 ),
                 _react2.default.createElement('br', null),
                 _react2.default.createElement(
                     'span',
-                    null,
+                    { className: 'interLine' },
                     'I'
                 ),
                 _react2.default.createElement(
                     'span',
-                    null,
+                    { className: 'interLine' },
                     '\''
                 ),
                 _react2.default.createElement(
                     'span',
-                    null,
+                    { className: 'interLine' },
                     'm'
                 ),
-                ' ',
                 _react2.default.createElement(
                     'span',
-                    null,
+                    { className: 'interLine' },
                     'M'
                 ),
                 _react2.default.createElement(
                     'span',
-                    null,
+                    { className: 'interLine' },
                     'a'
                 ),
                 _react2.default.createElement(
                     'span',
-                    null,
+                    { className: 'interLine' },
                     'x'
                 )
             );
@@ -22228,6 +22227,29 @@ var HomeText = function (_React$Component2) {
     }]);
 
     return HomeText;
+}(_react2.default.Component);
+
+var HomeContactButton = function (_React$Component3) {
+    _inherits(HomeContactButton, _React$Component3);
+
+    function HomeContactButton() {
+        _classCallCheck(this, HomeContactButton);
+
+        return _possibleConstructorReturn(this, (HomeContactButton.__proto__ || Object.getPrototypeOf(HomeContactButton)).apply(this, arguments));
+    }
+
+    _createClass(HomeContactButton, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'contactButton' },
+                'contact'
+            );
+        }
+    }]);
+
+    return HomeContactButton;
 }(_react2.default.Component);
 
 /***/ })

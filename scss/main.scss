@@ -1,5 +1,43 @@
 @import url(./cssReset.scss);
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.interLine {
+    display: inline-block;
+    margin-bottom: 0.3em;
+}
+
+.navButtons {
+    // background-color: #B2DFDB;
+     display: flex;
+     
+     .homeNavButton {
+         background-image: url(../img/home.png);
+         background-repeat:  no-repeat;
+         background-position: center;
+     }
+     
+     .aboutMeNavButton {
+         background-image: url(../img/aboutMe.png);
+         background-repeat:  no-repeat;
+         background-position: center;
+     }
+     
+     .skillsNavButton {
+         background-image: url(../img/skills.png);
+         background-repeat:  no-repeat;
+         background-position: center;
+     }
+     
+     .contactNavButton {
+         background-image: url(../img/contact.png);
+         background-repeat:  no-repeat;
+         background-position: center;
+     }
+ }
 
 @media (max-width: 500px) {
     .menu {
@@ -51,6 +89,16 @@
             height: 60px;
         }
     }
+
+    .homePage {
+        margin: 100px 0 0 50px;
+        font-size: 2em;
+
+        .contactButton {
+            border: solid 0.1em black;
+            color: red;
+        }
+    }
 }
 
 @media (min-width: 501px) {
@@ -97,43 +145,4 @@
     }
 }
 
-.navButtons {
-   // background-color: #B2DFDB;
-    display: flex;
-    
-    .homeNavButton {
-        background-image: url(../img/home.png);
-        background-repeat:  no-repeat;
-        background-position: center;
-        // width: 32px;
-        // height: 32px;
-    }
-    
-    .aboutMeNavButton {
-        background-image: url(../img/aboutMe.png);
-        background-repeat:  no-repeat;
-        background-position: center;
-        // width: 32px;
-        // height: 32px;
-    }
-    
-    .skillsNavButton {
-        background-image: url(../img/skills.png);
-        background-repeat:  no-repeat;
-        background-position: center;
-        // width: 32px;
-        // height: 32px;
-    }
-    
-    .contactNavButton {
-        background-image: url(../img/contact.png);
-        background-repeat:  no-repeat;
-        background-position: center;
-        // width: 32px;
-        // height: 32px;
-    }
-}
 
-body {
-    font-family: 'Open Sans', sans-serif;
-}
