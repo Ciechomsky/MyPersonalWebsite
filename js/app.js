@@ -1128,8 +1128,7 @@ var App = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(Menu, null),
-                'Test'
+                _react2.default.createElement(Menu, null)
             );
         }
     }]);
@@ -1153,7 +1152,7 @@ var Menu = function (_React$Component2) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { 'class': 'menu' },
+                { className: 'menu' },
                 _react2.default.createElement(MiniLogo, null),
                 _react2.default.createElement(MenuButton, null),
                 _react2.default.createElement(NavButtons, null)
@@ -1181,7 +1180,7 @@ var MiniLogo = function (_React$Component3) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { 'class': 'minLogo' },
+                { className: 'minLogo' },
                 'OBRAZEK'
             );
         }
@@ -1197,9 +1196,26 @@ var MenuButton = function (_React$Component4) {
     _inherits(MenuButton, _React$Component4);
 
     function MenuButton() {
+        var _ref;
+
+        var _temp, _this4, _ret;
+
         _classCallCheck(this, MenuButton);
 
-        return _possibleConstructorReturn(this, (MenuButton.__proto__ || Object.getPrototypeOf(MenuButton)).apply(this, arguments));
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this4 = _possibleConstructorReturn(this, (_ref = MenuButton.__proto__ || Object.getPrototypeOf(MenuButton)).call.apply(_ref, [this].concat(args))), _this4), _this4.showNavButtons = function () {
+            // if (typeof this.eventOnClick === 'function') {
+            var navButtons = document.getElementsByClassName('navButtons');
+
+            if (navButtons[0].style.visibility == 'visible') {
+                navButtons[0].style.visibility = 'hidden';
+            } else {
+                navButtons[0].style.visibility = 'visible';
+            }
+        }, _temp), _possibleConstructorReturn(_this4, _ret);
     }
 
     _createClass(MenuButton, [{
@@ -1207,10 +1223,10 @@ var MenuButton = function (_React$Component4) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { 'class': 'menuButton' },
-                _react2.default.createElement('div', { 'class': 'singleBelt' }),
-                _react2.default.createElement('div', { 'class': 'singleBelt' }),
-                _react2.default.createElement('div', { 'class': 'singleBelt' })
+                { className: 'menuButton', onClick: this.showNavButtons },
+                _react2.default.createElement('div', { className: 'singleBelt' }),
+                _react2.default.createElement('div', { className: 'singleBelt' }),
+                _react2.default.createElement('div', { className: 'singleBelt' })
             );
         }
     }]);
@@ -1235,7 +1251,7 @@ var NavButtons = function (_React$Component5) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { 'class': 'navButtons' },
+                { className: 'navButtons' },
                 _react2.default.createElement(_navButtons.HomeNavButton, null),
                 _react2.default.createElement(_navButtons.AboutMeNavButton, null),
                 _react2.default.createElement(_navButtons.SkillsNavButton, null),
@@ -1262,7 +1278,7 @@ var SocialButtons = function (_React$Component6) {
     _createClass(SocialButtons, [{
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', { 'class': 'socialButtons' });
+            return _react2.default.createElement('div', { className: 'socialButtons' });
         }
     }]);
 
@@ -21464,7 +21480,7 @@ var HomeNavButton = exports.HomeNavButton = function (_React$Component) {
     _createClass(HomeNavButton, [{
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', { 'class': 'homeNavButton' });
+            return _react2.default.createElement('div', { className: 'homeNavButton' });
         }
     }]);
 
@@ -21483,7 +21499,7 @@ var AboutMeNavButton = exports.AboutMeNavButton = function (_React$Component2) {
     _createClass(AboutMeNavButton, [{
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', { 'class': 'aboutMeNavButton' });
+            return _react2.default.createElement('div', { className: 'aboutMeNavButton' });
         }
     }]);
 
@@ -21502,7 +21518,7 @@ var SkillsNavButton = exports.SkillsNavButton = function (_React$Component3) {
     _createClass(SkillsNavButton, [{
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', { 'class': 'skillsNavButton' });
+            return _react2.default.createElement('div', { className: 'skillsNavButton' });
         }
     }]);
 
@@ -21521,7 +21537,7 @@ var ContactNavButton = exports.ContactNavButton = function (_React$Component4) {
     _createClass(ContactNavButton, [{
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', { 'class': 'contactNavButton' });
+            return _react2.default.createElement('div', { className: 'contactNavButton' });
         }
     }]);
 
@@ -21568,7 +21584,7 @@ exports = module.exports = __webpack_require__(16)(undefined);
 exports.i(__webpack_require__(36), "");
 
 // module
-exports.push([module.i, "@media (max-width: 500px) {\n  .menu .menuButton {\n    visibility: visible;\n    width: 10%;\n    height: 60px; }\n    .menu .menuButton .singleBelt {\n      width: 35px;\n      height: 5px;\n      background-color: black;\n      margin: 6px 0; }\n  .navButtons {\n    background-color: #B2DFDB; }\n    .navButtons .homeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .aboutMeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .skillsNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .contactNavButton {\n      width: 25%;\n      height: 60px; } }\n\n@media (min-width: 501px) {\n  .menu .menuButton {\n    visibility: hidden; }\n  .navButtons {\n    background-color: red; }\n    .navButtons .homeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .aboutMeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .skillsNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .contactNavButton {\n      width: 32px;\n      height: 32px; } }\n\n.menu .minLogo {\n  float: left; }\n\n.menu .menuButton {\n  float: right; }\n\n.navButtons {\n  display: flex; }\n  .navButtons .homeNavButton {\n    background-image: url(" + __webpack_require__(37) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .aboutMeNavButton {\n    background-image: url(" + __webpack_require__(38) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .skillsNavButton {\n    background-image: url(" + __webpack_require__(39) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .contactNavButton {\n    background-image: url(" + __webpack_require__(40) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n", ""]);
+exports.push([module.i, "@media (max-width: 500px) {\n  .menu {\n    background-color: #B2DFDB;\n    width: 100%;\n    height: 60px; }\n    .menu .menuButton {\n      width: 10%;\n      height: 33px;\n      margin-top: 10px; }\n      .menu .menuButton .singleBelt {\n        width: 35px;\n        height: 5px;\n        background-color: black;\n        margin: 6px 0; }\n  .navButtons {\n    background-color: #B2DFDB;\n    opacity: 1;\n    left: 0;\n    position: fixed;\n    top: 60px;\n    width: 100%;\n    height: 60px;\n    visibility: hidden; }\n    .navButtons .homeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .aboutMeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .skillsNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .contactNavButton {\n      width: 25%;\n      height: 60px; } }\n\n@media (min-width: 501px) {\n  .menu .menuButton {\n    visibility: hidden; }\n  .navButtons {\n    background-color: red; }\n    .navButtons .homeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .aboutMeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .skillsNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .contactNavButton {\n      width: 32px;\n      height: 32px; } }\n\n.menu .minLogo {\n  visibility: hidden;\n  float: left; }\n\n.menu .menuButton {\n  float: right; }\n\n.navButtons {\n  display: flex; }\n  .navButtons .homeNavButton {\n    background-image: url(" + __webpack_require__(37) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .aboutMeNavButton {\n    background-image: url(" + __webpack_require__(38) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .skillsNavButton {\n    background-image: url(" + __webpack_require__(39) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .contactNavButton {\n    background-image: url(" + __webpack_require__(40) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n", ""]);
 
 // exports
 

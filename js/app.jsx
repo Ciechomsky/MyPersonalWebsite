@@ -16,7 +16,6 @@ class App extends React.Component {
     render() {
         return <div>
             < Menu />
-            Test
             </div>
     }
 }
@@ -26,7 +25,7 @@ class App extends React.Component {
 class Menu extends React.Component {
 
     render() {
-        return <div class="menu">            
+        return <div className="menu">            
             <MiniLogo />
             <MenuButton />
             <NavButtons />            
@@ -37,7 +36,7 @@ class Menu extends React.Component {
 // Logo in Menu
 class MiniLogo extends React.Component {
     render() {
-        return <div class="minLogo">
+        return <div className="minLogo">
             OBRAZEK
             </div>
     }
@@ -45,11 +44,22 @@ class MiniLogo extends React.Component {
 
 //Menu button
 class MenuButton extends React.Component {
+    showNavButtons = () => {
+       // if (typeof this.eventOnClick === 'function') {
+            var navButtons = document.getElementsByClassName('navButtons');
+
+            if(navButtons[0].style.visibility == 'visible') {
+                navButtons[0].style.visibility = 'hidden';
+            } else {
+                navButtons[0].style.visibility = 'visible';
+            }
+    }
+
     render() {
-        return <div class="menuButton">
-                    <div class="singleBelt" />
-                    <div class="singleBelt" />
-                    <div class="singleBelt" />
+        return <div className="menuButton" onClick ={this.showNavButtons}>
+                    <div className="singleBelt" />
+                    <div className="singleBelt" />
+                    <div className="singleBelt" />
             </div>
     }
 }
@@ -57,7 +67,7 @@ class MenuButton extends React.Component {
 // Nav Buttons
 class NavButtons extends React.Component {
     render() {
-        return <div class="navButtons">
+        return <div className="navButtons">
                 <HomeNavButton />
                 <AboutMeNavButton />
                 <SkillsNavButton />
@@ -69,7 +79,7 @@ class NavButtons extends React.Component {
 // Social buttons
 class SocialButtons extends React.Component {
     render() {
-        return <div class="socialButtons">
+        return <div className="socialButtons">
             </div>
     }
 }

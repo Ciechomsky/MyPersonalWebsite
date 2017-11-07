@@ -2,11 +2,14 @@
 
 @media (max-width: 500px) {
     .menu {
+        background-color: #B2DFDB;
+        width: 100%;
+        height: 60px;
 
         .menuButton {
-            visibility: visible;
             width: 10%;
-            height: 60px;
+            height: 33px;
+            margin-top: 10px;
 
             .singleBelt {                
                 width: 35px;
@@ -19,7 +22,14 @@
 
     .navButtons {
         background-color: #B2DFDB;
-        //visibility: hidden;
+        opacity: 1;
+        left: 0;
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        height: 60px;
+        //margin-top: 60px;
+        visibility: hidden;
 
         .homeNavButton {
             width: 25%;
@@ -78,6 +88,7 @@
 .menu {
 
     .minLogo{
+        visibility: hidden;
         float: left;;
     }
 
