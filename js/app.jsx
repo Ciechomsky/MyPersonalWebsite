@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {HomeNavButton, AboutMeNavButton, SkillsNavButton, ContactNavButton} from './navButtons.jsx'
+import {HomePage} from './content.jsx'
 
 require('../scss/main.scss')
 
@@ -26,6 +27,7 @@ class App extends React.Component {
     render() {
         return <div>
             < Menu />
+            < HomePage />
             </div>
     }
 }

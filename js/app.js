@@ -1099,6 +1099,8 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _navButtons = __webpack_require__(33);
 
+var _content = __webpack_require__(43);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1138,7 +1140,8 @@ var App = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(Menu, null)
+                _react2.default.createElement(Menu, null),
+                _react2.default.createElement(_content.HomePage, null)
             );
         }
     }]);
@@ -21591,9 +21594,10 @@ if(false) {
 exports = module.exports = __webpack_require__(16)(undefined);
 // imports
 exports.i(__webpack_require__(36), "");
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans);", ""]);
 
 // module
-exports.push([module.i, "@media (max-width: 500px) {\n  .menu {\n    background-color: #B2DFDB;\n    width: 100%;\n    height: 60px; }\n    .menu .menuButton {\n      width: 10%;\n      height: 33px;\n      margin-top: 10px; }\n      .menu .menuButton .singleBelt {\n        width: 35px;\n        height: 5px;\n        background-color: black;\n        margin: 6px 0; }\n  .navButtons {\n    background-color: #B2DFDB;\n    opacity: 1;\n    left: 0;\n    position: fixed;\n    top: 60px;\n    width: 100%;\n    height: 60px;\n    visibility: hidden; }\n    .navButtons .homeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .aboutMeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .skillsNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .contactNavButton {\n      width: 25%;\n      height: 60px; } }\n\n@media (min-width: 501px) {\n  .menu .menuButton {\n    visibility: hidden; }\n  .navButtons {\n    background-color: red;\n    visibility: visible; }\n    .navButtons .homeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .aboutMeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .skillsNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .contactNavButton {\n      width: 32px;\n      height: 32px; } }\n\n.menu .minLogo {\n  visibility: hidden;\n  float: left; }\n\n.menu .menuButton {\n  float: right; }\n\n.navButtons {\n  display: flex; }\n  .navButtons .homeNavButton {\n    background-image: url(" + __webpack_require__(37) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .aboutMeNavButton {\n    background-image: url(" + __webpack_require__(38) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .skillsNavButton {\n    background-image: url(" + __webpack_require__(39) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .contactNavButton {\n    background-image: url(" + __webpack_require__(40) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n", ""]);
+exports.push([module.i, "@media (max-width: 500px) {\n  .menu {\n    background-color: #B2DFDB;\n    width: 100%;\n    height: 60px; }\n    .menu .menuButton {\n      width: 10%;\n      height: 33px;\n      margin-top: 10px; }\n      .menu .menuButton .singleBelt {\n        width: 35px;\n        height: 5px;\n        background-color: black;\n        margin: 6px 0; }\n  .navButtons {\n    background-color: #B2DFDB;\n    opacity: 1;\n    left: 0;\n    position: fixed;\n    top: 60px;\n    width: 100%;\n    height: 60px;\n    visibility: hidden; }\n    .navButtons .homeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .aboutMeNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .skillsNavButton {\n      width: 25%;\n      height: 60px; }\n    .navButtons .contactNavButton {\n      width: 25%;\n      height: 60px; } }\n\n@media (min-width: 501px) {\n  .menu .menuButton {\n    visibility: hidden; }\n  .navButtons {\n    background-color: red; }\n    .navButtons .homeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .aboutMeNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .skillsNavButton {\n      width: 32px;\n      height: 32px; }\n    .navButtons .contactNavButton {\n      width: 32px;\n      height: 32px; } }\n\n.menu .minLogo {\n  visibility: hidden;\n  float: left; }\n\n.menu .menuButton {\n  float: right; }\n\n.navButtons {\n  display: flex; }\n  .navButtons .homeNavButton {\n    background-image: url(" + __webpack_require__(37) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .aboutMeNavButton {\n    background-image: url(" + __webpack_require__(38) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .skillsNavButton {\n    background-image: url(" + __webpack_require__(39) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n  .navButtons .contactNavButton {\n    background-image: url(" + __webpack_require__(40) + ");\n    background-repeat: no-repeat;\n    background-position: center; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
 
 // exports
 
@@ -22102,6 +22106,129 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.HomePage = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(10);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var HomePage = exports.HomePage = function (_React$Component) {
+    _inherits(HomePage, _React$Component);
+
+    function HomePage() {
+        _classCallCheck(this, HomePage);
+
+        return _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).apply(this, arguments));
+    }
+
+    _createClass(HomePage, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                ' ',
+                _react2.default.createElement(HomeText, null)
+            );
+        }
+    }]);
+
+    return HomePage;
+}(_react2.default.Component);
+
+var HomeText = function (_React$Component2) {
+    _inherits(HomeText, _React$Component2);
+
+    function HomeText() {
+        _classCallCheck(this, HomeText);
+
+        return _possibleConstructorReturn(this, (HomeText.__proto__ || Object.getPrototypeOf(HomeText)).apply(this, arguments));
+    }
+
+    _createClass(HomeText, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'span',
+                    null,
+                    'H'
+                ),
+                _react2.default.createElement(
+                    'span',
+                    null,
+                    'i'
+                ),
+                _react2.default.createElement(
+                    'span',
+                    null,
+                    ','
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                    'span',
+                    null,
+                    'I'
+                ),
+                _react2.default.createElement(
+                    'span',
+                    null,
+                    '\''
+                ),
+                _react2.default.createElement(
+                    'span',
+                    null,
+                    'm'
+                ),
+                ' ',
+                _react2.default.createElement(
+                    'span',
+                    null,
+                    'M'
+                ),
+                _react2.default.createElement(
+                    'span',
+                    null,
+                    'a'
+                ),
+                _react2.default.createElement(
+                    'span',
+                    null,
+                    'x'
+                )
+            );
+        }
+    }]);
+
+    return HomeText;
+}(_react2.default.Component);
 
 /***/ })
 /******/ ]);
